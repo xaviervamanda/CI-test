@@ -6,7 +6,7 @@ services:
     ports:
       - 5433:5432
     env_file:
-      - .env
+      - .env.test
   node:
     container_name: node
     build: .
@@ -15,4 +15,4 @@ services:
     depends_on:
       - postgres
     env_file:
-      - .env
+      - .env.test
